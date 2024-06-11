@@ -5,7 +5,7 @@ class HTTPREQUEST(BaseHTTPRequestHandler):
 
     # Handle GET requests
     def do_GET(self):
-        print("it's GET request")
+        
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
@@ -17,7 +17,7 @@ class HTTPREQUEST(BaseHTTPRequestHandler):
 
     # Handle POST requests
     def do_POST(self):
-        print("it's POST request")
+        
         # Get the length of the data sent in the request
         content_length = int(self.headers['Content-Length'])
         # Read the data sent in the request body
@@ -33,7 +33,7 @@ class HTTPREQUEST(BaseHTTPRequestHandler):
 
     # Handle PUT requests
     def do_PUT(self):
-        print("it's PUT request")
+       
         # Get the length of the data sent in the request
         content_length = int(self.headers['Content-Length'])
         # Read the data sent in the request body
@@ -48,7 +48,7 @@ class HTTPREQUEST(BaseHTTPRequestHandler):
 
     # Handle HEAD requests
     def do_HEAD(self):
-        print("it's HEAD request")
+        
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
